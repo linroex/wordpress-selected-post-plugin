@@ -1,11 +1,17 @@
 #selected_post_widget_form #result_list li{
-    width: 100%;
+    width: 96%;
     border: 1px black solid;
     background: black;
     margin-bottom: 5px;
     color: white;
     padding: 10px 0px 10px 10px;
     
+}
+
+#selected_post_widget_form #result_list li .remove{
+    
+    float: right;
+    margin-right: 10px;
 }
 
 .feature-post-widget{

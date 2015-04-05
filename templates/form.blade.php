@@ -16,8 +16,8 @@
     </div>
     <div class="clearfix" style="clear:both;"></div>
     <ul id="result_list">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        <li>1 <span class="dashicons dashicons-trash remove"></span></li>
+        <li>2 <span class="dashicons dashicons-trash remove"></span></li>
+        <li>3 <span class="dashicons dashicons-trash remove"></span></li>
     </ul>
 </div>
