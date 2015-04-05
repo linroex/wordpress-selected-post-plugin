@@ -1,6 +1,6 @@
 {
     "require": {
         "windwalker/renderer": "~2.0",
-        "illuminate/view": "~5.0"
+        "illuminate/view": "4.*"
     }
 }
