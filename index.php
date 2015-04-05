@@ -10,7 +10,7 @@
 
 class Selected_Post extends WP_Widget {
     public function __construct() {
-
+        parent::__construct('selected_post', '精選文章集', ['description'=>'讓你可以挑選文章並顯示在側邊欄的小工具']);
     }
 
     public function widget($args, $instance) {
