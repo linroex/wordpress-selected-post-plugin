@@ -25,3 +25,7 @@ class Selected_Post extends WP_Widget {
 
     }
 }
+
+add_action('widgets_init', function(){
+    register_widget('Selected_Post');
+});
