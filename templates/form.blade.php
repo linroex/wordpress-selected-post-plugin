@@ -1,20 +1,9 @@
 <script>
     jQuery(document).ready(function(){
-        jQuery('ul').sortable();
-        jQuery('ul').disableSelection();
+        jQuery('#selected_post_widget_form ul').sortable();
+        jQuery('#selected_post_widget_form ul').disableSelection();
     });
 </script>
-<style>
-    #selected_post_widget_form #result_list li{
-        width: 100%;
-        border: 1px black solid;
-        background: black;
-        margin-bottom: 5px;
-        color: white;
-        padding: 10px 0px 10px 10px;
-        
-    }
-</style>
 
 <div id="selected_post_widget_form">
     <p>
