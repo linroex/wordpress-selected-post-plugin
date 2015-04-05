@@ -19,15 +19,20 @@ class Selected_Post extends WP_Widget {
 
         $this->blade = new BladeRenderer(__DIR__ . '/templates', ['cache_path'=> __DIR__ . '/cache']);
 
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('jquery-ui-core');
+        wp_enqueue_script('jquery-ui-sortable');
+
     }
 
     public function widget($args, $instance) {
+        echo $this->blade->render('widget');
         
     }
 
     public function form($instance) {
-        var_dump($this->blade->render('example', ['name'=>'linroex']));
-        exit();
+        echo $this->blade->render('form');
+        
     }
 
     public function update($new, $old) {
