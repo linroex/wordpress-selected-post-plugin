@@ -1,4 +1,4 @@
-#selected_post_widget_form #result_list li{
+.selected_post_widget_form .result_list li{
     width: 96%;
     border: 1px black solid;
     background: black;
@@ -8,7 +8,7 @@
     
 }
 
-#selected_post_widget_form #result_list li .remove{
+.selected_post_widget_form .result_list li .remove{
     
     float: right;
     margin-right: 10px;

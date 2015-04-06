@@ -19,11 +19,13 @@ class Selected_Post extends WP_Widget {
 
         $this->blade = new BladeRenderer(__DIR__ . '/templates', ['cache_path'=> __DIR__ . '/cache']);
 
+        wp_register_script('Selected-Post-custom-script', plugins_url('/js/custom.js', __FILE__));
         wp_register_style('Selected-Post-custom-style', plugins_url('/css/style.css', __FILE__));
 
         wp_enqueue_script('jquery');
         wp_enqueue_script('jquery-ui-core');
         wp_enqueue_script('jquery-ui-sortable');
+        wp_enqueue_script('Selected-Post-custom-script');
         wp_enqueue_style('Selected-Post-custom-style');
     }
 
