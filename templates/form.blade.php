@@ -15,11 +15,9 @@
     </div>
     <div class="clearfix" style="clear:both;"></div>
     <ul class="result_list">
-        @foreach($posts as $post)
-            <?php
-                $data = explode("|||", $post);
-            ?>
-            <li>{{$data[1]}}<span class="dashicons dashicons-trash remove"></span><input type="hidden" name="{{$column_name}}[]" value="{{$data[0]}}|||{{$data[1]}}" /></li>
+        
+        @foreach($posts as $id => $title)
+            <li>{{$title}}<span class="dashicons dashicons-trash remove"></span><input type="hidden" name="{{$column_name}}[id][]" value="{{$id}}" /><input type="hidden" name="{{$column_name}}[title][]" value="{{$title}}"/></li>
         @endforeach
     </ul>
 

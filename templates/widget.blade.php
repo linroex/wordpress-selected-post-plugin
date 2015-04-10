@@ -3,7 +3,7 @@
     <h1>精選文章</h1>
     @foreach($posts as $post)
         <?php
-            $data = get_post(explode("|||", $post)[0]);
+            $data = get_post($post);
             
         ?>
         <div class="feature-post">
