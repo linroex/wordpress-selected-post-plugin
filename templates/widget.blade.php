@@ -16,7 +16,7 @@
                 {{date('Y/m/d', strtotime($data->post_date))}}
             </span>
             <span class="post-author">
-                {{the_author_meta('user_nicename', $data->post_author)}}
+                {{the_author_meta('display_name', $data->post_author)}}
             </span>
         </div>
     @endforeach
