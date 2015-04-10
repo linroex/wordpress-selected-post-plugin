@@ -30,12 +30,21 @@ class Selected_Post extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-
+        if(!$instance){
+            $instance['post']['id'] = [];
+        }
+        
         echo $this->blade->render('widget', ['posts'=>$instance['post']['id']]);
 
     }
 
     public function form($instance) {
+
+        if(!$instance){
+            $instance['post']['id'] = [];
+            $instance['post']['title'] = [];
+        }
+
         echo "<script>jQuery(document).trigger('domchange');</script>";
         echo $this->blade->render('form', [
             'column_name'=>$this->get_field_name('post'), 
