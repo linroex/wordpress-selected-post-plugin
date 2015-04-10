@@ -30,12 +30,13 @@ class Selected_Post extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-        echo $this->blade->render('widget');
+
+        echo $this->blade->render('widget', ['posts'=>$instance['post_id']]);
 
     }
 
     public function form($instance) {
-        
+
         echo $this->blade->render('form', [
             'column_name'=>$this->get_field_name('post_id'), 
             'posts'=>$instance['post_id']
