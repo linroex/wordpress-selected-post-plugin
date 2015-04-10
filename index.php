@@ -36,7 +36,7 @@ class Selected_Post extends WP_Widget {
     }
 
     public function form($instance) {
-
+        echo "<script>jQuery(document).trigger('domchange');</script>";
         echo $this->blade->render('form', [
             'column_name'=>$this->get_field_name('post'), 
             'posts'=>array_combine($instance['post']['id'], $instance['post']['title'])
@@ -44,6 +44,7 @@ class Selected_Post extends WP_Widget {
     }
 
     public function update($new, $old) {
+        
         return $new;
         // var_dump($new);
         // exit();

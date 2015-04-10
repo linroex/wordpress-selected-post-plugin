@@ -7,19 +7,20 @@ function insert(post_id, name){
 jQuery(document).ready(function(){
     jQuery('.selected_post_widget_form ul').sortable();
     jQuery('.selected_post_widget_form ul').disableSelection();
-
-    jQuery('.search_btn').click(function(e){
-        e.preventDefault();
-        insert(jQuery('.open .search_text').val(), name);
-        
-    });
-
     
 });
 
+jQuery(document).on('domchange', function(){
+    jQuery('.selected_post_widget_form ul').sortable();
+    jQuery('.selected_post_widget_form ul').disableSelection();
+})
+
+jQuery(document).on('click', '.search_btn', function(e){
+    e.preventDefault();
+    insert(jQuery('.open .search_text').val(), name);
+});
+
 jQuery(document).on('click','.open .remove',function(e){
-    console.log('remove');
     e.preventDefault();
     jQuery(this).parent().remove();
-    console.log(jQuery(this).parent());
 });
