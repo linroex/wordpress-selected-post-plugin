@@ -35,12 +35,18 @@ class Selected_Post extends WP_Widget {
     }
 
     public function form($instance) {
-        echo $this->blade->render('form');
         
+        echo $this->blade->render('form', [
+            'column_name'=>$this->get_field_name('post_id'), 
+            'posts'=>$instance['post_id']
+        ]);
     }
 
     public function update($new, $old) {
-
+        return $new;
+        // var_dump($new);
+        // exit();
+        
     }
 }
 
